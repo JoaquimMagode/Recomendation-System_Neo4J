@@ -6,7 +6,7 @@
 //
 // Run with: npm run seed
 require('dotenv').config();
-const { driver, verifyConnection, close } = require('./db');
+const { driver, verifyConnection, close, DATABASE } = require('./db');
 
 const places = [
   {
@@ -126,8 +126,9 @@ async function seed() {
     process.exit(1);
   }
 
-  const session = driver.session();
+  const session = driver.session({ database: DATABASE });
   try {
+    console.log(`🗄️  Using database: ${DATABASE}`);
     console.log('🧹 Clearing existing data...');
     await session.run('MATCH (n) DETACH DELETE n');
 
