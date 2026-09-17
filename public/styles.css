@@ -1,0 +1,52 @@
+body {
+  background-color: #f5f7fa;
+}
+
+.hero {
+  background: linear-gradient(135deg, #4e73df 0%, #224abe 100%);
+}
+
+/* Tag chips act as toggle buttons */
+.tag-chip {
+  cursor: pointer;
+  user-select: none;
+  border: 1px solid #ced4da;
+  border-radius: 20px;
+  padding: 4px 12px;
+  font-size: 0.85rem;
+  background: #fff;
+  transition: all 0.15s ease-in-out;
+}
+
+.tag-chip:hover {
+  border-color: #4e73df;
+}
+
+.tag-chip.active {
+  background: #4e73df;
+  color: #fff;
+  border-color: #4e73df;
+}
+
+.place-card {
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.place-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1) !important;
+}
+
+.match-badge {
+  font-size: 0.75rem;
+}
+
+.tag-pill {
+  font-size: 0.7rem;
+  background: #eef1f8;
+  color: #445;
+  border-radius: 12px;
+  padding: 2px 8px;
+  margin: 2px;
+  display: inline-block;
+}
